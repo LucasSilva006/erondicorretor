@@ -30,3 +30,146 @@ h2 {
 p {
   font-family: var(--fonte-texto);
 }
+
+header {
+    font-family: var(--fonte-subtitulo);
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: -1px;
+}
+
+header img {
+    width: 100px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #000000;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu.show {
+    display: flex;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu ul li a:hover {
+    color: #ccc;
+}
+
+
+
+#hero {
+    background-color: #000000;
+    text-align: start;
+    background-image: url("/images/imagens-principais/img-hero-erondi.jpg");
+    background-position: center right;
+    background-size: cover;
+    color: white;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 24px 24px 20px;
+    transition: all ease 0.3s;
+}
+
+#hero h1 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#hero p {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cinza-claro);
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    border: #fff solid 1px;
+    font-family: var(--fonte-texto);
+    font-size: 0.7em;
+}
+
+#hero a:hover {
+    background-color: var(--azul);
+    color: var(--cinza-claro);
+    border: var(--azul) solid 1px;
+}
+
+#hero>a>span {
+    margin-left: 10px;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .box-servicos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
