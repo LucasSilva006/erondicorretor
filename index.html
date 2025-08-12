@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erondi Corretor</title>
-    <link rel="stylesheet" href="estilos/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erondi Corretor</title>
+  <meta name="description" content="Encontre o lar dos seus sonhos com o corretor Erondi. Casas e apartamentos à venda e para alugar com segurança e confiança.">
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="shortcut icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-      <img src="images/imagens-principais/img-logo-navbar.jpg" alt="Erondi Corretor"/>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
-      <nav class="menu" id="menu">
-        <a href="#imoveis">Imóveis</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#provas-sociais">Provas Sociais</a>
-        <a href="#clientes">Clientes</a>
-      </nav>
-    </header>
+  <header>
+    <img src="images/imagens-principais/img-logo-navbar.jpg" alt="Erondi Corretor" />
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+    <nav class="menu" id="menu">
+      <a href="#imoveis">Imóveis</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#provas-sociais">Provas Sociais</a>
+      <a href="#clientes">Clientes</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="hero">
-        <h1>ENCONTRE O LAR DOS SEUS SONHOS</h1>
-        <p>
-          As melhores opções de imóveis para comprar, vender ou alugar com segurança e confiança.
-        </p>
-        <a href="https://wa.me/5581994246668" target="_blank"
-          >Fale conosco agora mesmo<span>&rarr;</span></a
-        >
-      </section>
+  <main>
+    <section id="hero">
+      <h1>ENCONTRE O LAR DOS SEUS SONHOS</h1>
+      <p>
+        As melhores opções de imóveis para comprar, vender ou alugar com segurança e confiança.
+      </p>
+      <a href="https://wa.me/5581994246668" target="_blank" class="botao-whatsapp-hero">
+        Fale conosco agora mesmo <span>&rarr;</span>
+      </a>
+    </section>
 
+    <section id="imoveis">
+      <h2 id="imoveis-tit">IMÓVEIS À VENDA</h2>
+      <h4 id="subtit-imoveis">Casas para vender</h4>
+      <p id="imoveis-p">Deslize para ver mais <span>&rarr;</span></p>
 
+      <div class="carrossel-fotos-imoveis-a-venda">
+        <div class="fotos-imoveis-a-venda" role="img" aria-label="Fachada externa da casa"
+          style="background-image: url('images/imagens-site/imagens-imoveis-a-venda/imagem-casa-a-venda1/casa-a-venda-exterior.jpg');"></div>
+        <div class="fotos-imoveis-a-venda" role="img" aria-label="Frente da casa"
+          style="background-image: url('images/imagens-site/imagens-imoveis-a-venda/imagem-casa-a-venda1/casa-a-venda-frente.jpg');"></div>
+        <div class="fotos-imoveis-a-venda" role="img" aria-label="Vista geral da casa"
+          style="background-image: url('images/imagens-site/imagens-imoveis-a-venda/imagem-casa-a-venda1/casa-a-venda-geral.jpg');"></div>
+        <div class="fotos-imoveis-a-venda" role="img" aria-label="Vista lateral da casa"
+          style="background-image: url('images/imagens-site/imagens-imoveis-a-venda/imagem-casa-a-venda1/casa-a-venda-geral2.jpg');"></div>
+      </div>
 
+      <a href="https://wa.me/5581994246668?text=Olá!%20Tenho%20interesse%20em%20encontrar%20minha%20nova%20casa.%20Pode%20me%20ajudar?"
+        target="_blank" class="botao-whatsapp">
+        Encontre sua nova casa
+      </a>
+    </section>
+  </main>
 
-    </main>
-
-
-    <script src="script/main.js"></script>
+  <script src="script/main.js"></script>
 </body>
 </html>

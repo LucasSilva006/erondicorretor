@@ -10,25 +10,34 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f6f6f6;
+}
+
 :root {
-  --fonte-titulo: 'Montserrat', sans-serif;
-  --fonte-subtitulo: 'Poppins', sans-serif;
-  --fonte-texto: 'Open Sans', sans-serif;
-  --azul: #004893;
-  --dourado: #ebca75;
-  --cinza-claro: #f4f4f4;
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-subtitulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Open Sans', sans-serif;
+    --azul: #004893;
+    --dourado: #ebca75;
+    --cinza-claro: #f4f4f4;
 }
 
 h1 {
-  font-family: var(--fonte-titulo);
+    font-family: var(--fonte-titulo);
 }
 
 h2 {
-  font-family: var(--fonte-subtitulo);
+    font-family: var(--fonte-subtitulo);
+}
+
+h4 {
+    font-family: var(--fonte-texto);
+    font-weight: 700;
 }
 
 p {
-  font-family: var(--fonte-texto);
+    font-family: var(--fonte-texto);
 }
 
 header {
@@ -65,8 +74,8 @@ header img {
     right: 1rem;
     padding: 1rem;
     border-radius: 5px;
-    font-size: 1.2em;
-    text-align: center;
+    font-size: 1em;
+    text-align: start;
 }
 
 .menu a {
@@ -112,7 +121,6 @@ header img {
     justify-content: center;
     align-items: flex-start;
     padding: 24px 24px 24px 20px;
-    transition: all ease 0.3s;
 }
 
 #hero h1 {
@@ -141,6 +149,7 @@ header img {
     border: #fff solid 1px;
     font-family: var(--fonte-texto);
     font-size: 0.7em;
+    transition: all ease 0.4s;
 }
 
 #hero a:hover {
@@ -152,6 +161,72 @@ header img {
 #hero>a>span {
     margin-left: 10px;
 }
+
+#imoveis {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+#imoveis-tit {
+    margin: 0 0 20px 0;
+}
+
+#subtit-imoveis {
+    text-align: start;
+}
+
+#imoveis-p {
+    margin: 0 0 15px 0;
+    text-align: start;
+}
+
+
+.carrossel-fotos-imoveis-a-venda {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+}
+
+.fotos-imoveis-a-venda {
+    min-width: 300px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.381);
+}
+
+.botao-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--azul);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: var(--fonte-texto);
+    margin: 20px auto;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-whatsapp:hover {
+    background-color: #002246;
+    transform: scale(1.05);
+}
+
+.icone-whatsapp {
+    width: 20px;
+    height: 20px;
+}
+
 
 
 
