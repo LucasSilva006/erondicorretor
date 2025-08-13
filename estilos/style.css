@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
@@ -18,6 +16,7 @@ body {
     --fonte-titulo: 'Montserrat', sans-serif;
     --fonte-subtitulo: 'Poppins', sans-serif;
     --fonte-texto: 'Open Sans', sans-serif;
+    --tamanho-texto: 1em;
     --azul: #004893;
     --dourado: #ebca75;
     --cinza-claro: #f4f4f4;
@@ -31,18 +30,20 @@ h2 {
     font-family: var(--fonte-subtitulo);
 }
 
-h4 {
+h3 {
     font-family: var(--fonte-texto);
     font-weight: 700;
+    font-size: 1.3em;
 }
 
 p {
     font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
 }
 
 header {
     font-family: var(--fonte-subtitulo);
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     padding: 15px 20px;
     display: flex;
@@ -68,7 +69,7 @@ header img {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: #000000;
+    background: #000;
     position: absolute;
     top: 60px;
     right: 1rem;
@@ -106,10 +107,8 @@ header img {
     color: #ccc;
 }
 
-
-
 #hero {
-    background-color: #000000;
+    background-color: #000;
     text-align: start;
     background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
     background-position: center right;
@@ -124,17 +123,15 @@ header img {
 }
 
 #hero h1 {
-    font-size: 1.3em;
+    font-size: 1.7em;
     margin-bottom: 15px;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
 }
 
 #hero p {
     font-size: 15px;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 20px;
     text-align: start;
 }
@@ -148,7 +145,7 @@ header img {
     border-radius: 4px;
     border: #fff solid 1px;
     font-family: var(--fonte-texto);
-    font-size: 0.7em;
+    font-size: 0.9em;
     transition: all ease 0.4s;
 }
 
@@ -162,26 +159,43 @@ header img {
     margin-left: 10px;
 }
 
-#imoveis {
-    padding: 25px 20px;
+#imoveis-casas,
+#imoveis-caixa,
+#provas-reais {
+    text-align: center;
+    margin: 25px auto;
+}
+
+#box-casas-a-venda,
+#box-terrenos-a-venda,
+#box-caixa,
+#box-provas-reais {
+    padding: 0 20px;
     text-align: center;
 }
 
-#imoveis-tit {
+.imoveis-tit,
+.provas-tit {
     margin: 0 0 20px 0;
 }
 
-#subtit-imoveis {
+.imoveis-subtit,
+.provas-subtit {
     text-align: start;
 }
 
-#imoveis-p {
+#box-terrenos-a-venda>.imoveis-subtit {
+    padding-top: 15px;
+}
+
+.imoveis-p,
+.provas-p {
     margin: 0 0 15px 0;
     text-align: start;
 }
 
-
-.carrossel-fotos-imoveis-a-venda {
+.carrossel-fotos-imoveis-a-venda,
+.carrossel-fotos-provas-reais {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -189,7 +203,8 @@ header img {
     padding: 10px;
 }
 
-.fotos-imoveis-a-venda {
+.fotos-imoveis-a-venda,
+.fotos-provas-reais {
     min-width: 300px;
     height: 250px;
     background-size: cover;
@@ -227,7 +242,134 @@ header img {
     height: 20px;
 }
 
+#box-terrenos-a-venda {
+    background-color: #e2e2e2;
+}
 
+
+
+#sobre {
+    padding: 50px 20px;
+    background-image: linear-gradient(135deg, #000000, #2a2a2a);
+}
+
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    max-width: 15em;
+    max-height: 20em;
+    border-radius: 10px;
+    background-position: bottom middle;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sobre a {
+    color: var(--cinza-claro);
+    text-decoration: none;
+}
+
+#sobre a:hover {
+    text-decoration: underline;
+}
+
+.sobre-texto {
+    text-align: justify;
+}
+
+.sobre-texto h2 {
+    font-family: var(--fonte-subtitulo);
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sobre-texto h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--cinza-claro);
+    text-align: center;
+}
+
+.sobre-texto h3 span {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: var(--cinza-claro);
+}
+
+.sobre-texto p {
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    color: var(--cinza-claro);
+    line-height: 1.6;
+    margin: 25px 0;
+}
+
+
+.footer {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-social li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #bbbbbb;
+}
 
 
 
@@ -246,5 +388,22 @@ header img {
 
     .box-servicos {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sobre-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .sobre-imagem {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .sobre-texto {
+        flex: 2;
+        text-align: left;
     }
 }
