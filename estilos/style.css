@@ -111,7 +111,7 @@ header img {
 #hero {
     background-color: #000000;
     text-align: start;
-    background-image: url("/images/imagens-principais/img-hero-erondi.jpg");
+    background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
     background-position: center right;
     background-size: cover;
     color: white;
