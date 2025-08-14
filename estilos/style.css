@@ -18,27 +18,35 @@ main {
     --fonte-texto: 'Open Sans', sans-serif;
     --tamanho-texto: 1em;
     --azul: #004893;
+    --azul-escuro: #001730;
     --dourado: #ebca75;
-    --cinza-claro: #f4f4f4;
+    --cinza-claro: #fdfdfd;
 }
 
 h1 {
     font-family: var(--fonte-titulo);
+    color: var(--azul-escuro);
+
 }
 
 h2 {
     font-family: var(--fonte-subtitulo);
+    color: var(--azul-escuro);
+
 }
 
 h3 {
     font-family: var(--fonte-texto);
     font-weight: 700;
     font-size: 1.3em;
+    color: var(--azul-escuro);
+
 }
 
 p {
     font-family: var(--fonte-texto);
     font-size: var(--tamanho-texto);
+    color: var(--azul-escuro);
 }
 
 header {
@@ -127,6 +135,7 @@ header img {
     margin-bottom: 15px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    color: white;
 }
 
 #hero p {
@@ -184,6 +193,20 @@ header img {
     text-align: start;
 }
 
+#casa1 {
+    width: 20rem;
+    border-radius: 10px;
+}
+
+#p-desc-item {
+    max-width: 300px;
+    text-align: justify;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+
+
 #box-terrenos-a-venda>.imoveis-subtit {
     padding-top: 15px;
 }
@@ -206,13 +229,14 @@ header img {
 .fotos-imoveis-a-venda,
 .fotos-provas-reais {
     min-width: 300px;
-    height: 250px;
+    height: 450px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     flex-shrink: 0;
     scroll-snap-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.381);
+    margin: 0 auto;
 }
 
 .botao-whatsapp {
@@ -233,7 +257,7 @@ header img {
 }
 
 .botao-whatsapp:hover {
-    background-color: #002246;
+    background-color: var(--azul-escuro);
     transform: scale(1.05);
 }
 
@@ -243,14 +267,14 @@ header img {
 }
 
 #box-terrenos-a-venda {
-    background-color: #e2e2e2;
+    background-color: #f0f0f0;
 }
 
 
 
 #sobre {
     padding: 50px 20px;
-    background-image: linear-gradient(135deg, #000000, #2a2a2a);
+    background-image: linear-gradient(135deg, #00144c, #00091f);
 }
 
 .sobre-container {
@@ -321,6 +345,10 @@ header img {
     color: #ffffff;
     padding: 40px 20px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.footer p {
+    color: white;
 }
 
 .footer a {
