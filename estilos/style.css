@@ -1,15 +1,13 @@
+/* ========== IMPORTAÇÃO DE FONTES ========== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* ========== RESET E CONFIGURAÇÕES GLOBAIS ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-main {
-    background-color: #f6f6f6;
 }
 
 :root {
@@ -23,16 +21,19 @@ main {
     --cinza-claro: #fdfdfd;
 }
 
+main {
+    background-color: #f6f6f6;
+}
+
+/* ========== TIPOGRAFIA GLOBAL ========== */
 h1 {
     font-family: var(--fonte-titulo);
     color: var(--azul-escuro);
-
 }
 
 h2 {
     font-family: var(--fonte-subtitulo);
     color: var(--azul-escuro);
-
 }
 
 h3 {
@@ -40,15 +41,16 @@ h3 {
     font-weight: 700;
     font-size: 1.3em;
     color: var(--azul-escuro);
-
 }
 
 p {
     font-family: var(--fonte-texto);
     font-size: var(--tamanho-texto);
     color: var(--azul-escuro);
+    line-height: 1.6;
 }
 
+/* ========== HEADER E NAVEGAÇÃO ========== */
 header {
     font-family: var(--fonte-subtitulo);
     background-color: #000;
@@ -59,10 +61,12 @@ header {
     align-items: center;
     position: sticky;
     top: -1px;
+    z-index: 1000;
 }
 
 header img {
     width: 100px;
+    height: auto;
 }
 
 .menu-toggle {
@@ -71,6 +75,11 @@ header img {
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--cinza-claro);
 }
 
 .menu {
@@ -85,57 +94,67 @@ header img {
     border-radius: 5px;
     font-size: 1em;
     text-align: start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .menu a {
     color: white;
     text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--azul);
+    color: var(--cinza-claro);
 }
 
 .menu.show {
     display: flex;
 }
 
-#menu ul {
-    list-style: none;
-}
-
-#menu ul li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #444;
-}
-
-#menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-#menu ul li a:hover {
-    color: #ccc;
-}
-
+/* ========== SEÇÃO HERO ========== */
 #hero {
     background-color: #000;
     text-align: start;
     background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
     background-position: center right;
     background-size: cover;
+    background-attachment: fixed;
     color: white;
     min-height: 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 24px 24px 24px 20px;
+    padding: 24px 20px;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 20, 76, 0.7), rgba(0, 9, 31, 0.5));
+    z-index: 1;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 #hero h1 {
     font-size: 1.7em;
     margin-bottom: 15px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fonte-titulo);
     font-weight: 600;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #hero p {
@@ -143,31 +162,38 @@ header img {
     color: #fff;
     margin-bottom: 20px;
     text-align: start;
+    max-width: 400px;
 }
 
-#hero a {
+.botao-whatsapp-hero {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: var(--cinza-claro);
     color: #000;
     text-decoration: none;
-    border-radius: 4px;
-    border: #fff solid 1px;
+    border-radius: 6px;
+    border: 2px solid var(--cinza-claro);
     font-family: var(--fonte-texto);
     font-size: 0.9em;
-    transition: all ease 0.4s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-#hero a:hover {
+.botao-whatsapp-hero:hover {
     background-color: var(--azul);
     color: var(--cinza-claro);
-    border: var(--azul) solid 1px;
+    border-color: var(--azul);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-#hero>a>span {
+.botao-whatsapp-hero span {
     margin-left: 10px;
+    font-weight: bold;
 }
 
+/* ========== SEÇÕES PRINCIPAIS ========== */
 #imoveis-casas,
 #imoveis-caixa,
 #provas-reais {
@@ -175,6 +201,7 @@ header img {
     margin: 25px auto;
 }
 
+/* ========== CONTAINERS ========== */
 #box-casas-a-venda,
 #box-terrenos-a-venda,
 #box-caixa,
@@ -183,65 +210,129 @@ header img {
     text-align: center;
 }
 
+#box-terrenos-a-venda {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* ========== TÍTULOS ========== */
 .imoveis-tit,
 .provas-tit {
     margin: 0 0 20px 0;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 .imoveis-subtit,
 .provas-subtit {
     text-align: start;
+    margin-bottom: 10px;
 }
 
-#casa1 {
-    width: 20rem;
-    border-radius: 10px;
-}
-
-#p-desc-item {
-    max-width: 300px;
-    text-align: justify;
-    padding: 10px 20px;
-    margin: 0 auto;
-}
-
-
-
-#box-terrenos-a-venda>.imoveis-subtit {
+#box-terrenos-a-venda > .imoveis-subtit {
     padding-top: 15px;
 }
 
+/* ========== PARÁGRAFOS ========== */
 .imoveis-p,
 .provas-p {
     margin: 0 0 15px 0;
     text-align: start;
+    font-size: 0.95em;
+    color: #666;
 }
 
+.p-desc-item {
+    max-width: 300px;
+    text-align: justify;
+    padding: 10px 20px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+/* ========== IMAGENS ========== */
+.img-casa {
+    width: 100%;
+    max-width: 320px;
+    min-width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ========== CARROSSÉIS ========== */
 .carrossel-fotos-imoveis-a-venda,
 .carrossel-fotos-provas-reais {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--azul) transparent;
+    -webkit-overflow-scrolling: touch;
 }
 
+/* Webkit scrollbar styling */
+.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar,
+.carrossel-fotos-provas-reais::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-track,
+.carrossel-fotos-provas-reais::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-thumb,
+.carrossel-fotos-provas-reais::-webkit-scrollbar-thumb {
+    background: var(--azul);
+    border-radius: 10px;
+}
+
+.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-thumb:hover,
+.carrossel-fotos-provas-reais::-webkit-scrollbar-thumb:hover {
+    background: var(--azul-escuro);
+}
+
+/* ========== CARDS DOS IMÓVEIS ========== */
 .fotos-imoveis-a-venda,
 .fotos-provas-reais {
     min-width: 300px;
-    height: 450px;
-    background-size: cover;
-    background-position: center;
+    max-width: 320px;
+    height: auto;
+    min-height: 400px;
+    background: white;
     border-radius: 10px;
     flex-shrink: 0;
     scroll-snap-align: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.381);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
+    padding: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.desc-item {
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* ========== BOTÕES WHATSAPP ========== */
 .botao-whatsapp {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background-color: var(--azul);
     color: white;
@@ -252,29 +343,45 @@ header img {
     padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .botao-whatsapp:hover {
     background-color: var(--azul-escuro);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.botao-whatsapp:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .icone-whatsapp {
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
 }
 
-#box-terrenos-a-venda {
-    background-color: #f0f0f0;
-}
-
-
-
+/* ========== SEÇÃO SOBRE ========== */
 #sobre {
     padding: 50px 20px;
-    background-image: linear-gradient(135deg, #00144c, #00091f);
+    background: linear-gradient(135deg, #00144c, #00091f);
+    position: relative;
+}
+
+#sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/pattern-overlay.png') repeat;
+    opacity: 0.05;
+    z-index: 1;
 }
 
 .sobre-container {
@@ -284,25 +391,33 @@ header img {
     max-width: 1100px;
     margin: 0 auto;
     gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.sobre-imagem {
+    flex-shrink: 0;
 }
 
 .sobre-imagem img {
     width: 100%;
     height: 100%;
-    max-width: 15em;
-    max-height: 20em;
+    max-width: 240px;
+    max-height: 320px;
     border-radius: 10px;
-    background-position: bottom middle;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 #sobre a {
-    color: var(--cinza-claro);
+    color: var(--dourado);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 #sobre a:hover {
+    color: var(--cinza-claro);
     text-decoration: underline;
 }
 
@@ -315,20 +430,17 @@ header img {
     color: #ffffff;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .sobre-texto h3 {
     font-family: var(--fonte-titulo);
     font-weight: 600;
     margin-bottom: 15px;
-    color: var(--cinza-claro);
+    color: var(--dourado);
     text-align: center;
-}
-
-.sobre-texto h3 span {
-    font-weight: 400;
-    font-size: 0.9em;
-    color: var(--cinza-claro);
+    font-size: 1.2em;
 }
 
 .sobre-texto p {
@@ -339,12 +451,12 @@ header img {
     margin: 25px 0;
 }
 
-
+/* ========== FOOTER ========== */
 .footer {
-    background-color: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     color: #ffffff;
     padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-subtitulo);
 }
 
 .footer p {
@@ -354,9 +466,11 @@ header img {
 .footer a {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer a:hover {
+    color: var(--dourado);
     text-decoration: underline;
 }
 
@@ -365,6 +479,8 @@ header img {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .footer-links,
@@ -376,7 +492,9 @@ header img {
 .footer-links h4,
 .footer-social h4 {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--dourado);
+    font-weight: 600;
 }
 
 .footer-links ul,
@@ -388,18 +506,101 @@ header img {
 
 .footer-links li,
 .footer-social li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 14px;
 }
 
 .footer-copy {
     text-align: center;
     margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
     font-size: 12px;
     color: #bbbbbb;
 }
 
+#link-inove {
+    color: var(--dourado);
+    font-weight: 600;
+}
 
+#link-inove:hover {
+    color: var(--cinza-claro);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    #box-casas-a-venda,
+    #box-terrenos-a-venda,
+    #box-caixa,
+    #box-provas-reais {
+        padding: 0 10px;
+    }
+    
+    .fotos-imoveis-a-venda,
+    .fotos-provas-reais {
+        min-width: 280px;
+        max-width: 300px;
+    }
+    
+    .img-casa {
+        min-width: 260px;
+        max-width: 280px;
+    }
+    
+    .p-desc-item {
+        max-width: 260px;
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+    
+    .botao-whatsapp {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    #hero h1 {
+        font-size: 1.5em;
+    }
+    
+    #hero {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-fotos-imoveis-a-venda,
+    .carrossel-fotos-provas-reais {
+        gap: 10px;
+        padding: 8px;
+    }
+    
+    .fotos-imoveis-a-venda,
+    .fotos-provas-reais {
+        min-width: 260px;
+        max-width: 280px;
+        padding: 8px;
+    }
+    
+    .img-casa {
+        min-width: 240px;
+        max-width: 260px;
+        height: 180px;
+    }
+    
+    #hero h1 {
+        font-size: 1.3em;
+    }
+    
+    #hero p {
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 @media (min-width: 768px) {
     .menu {
@@ -408,19 +609,17 @@ header img {
         flex-direction: row;
         background: none;
         padding: 0;
+        box-shadow: none;
     }
 
     .menu-toggle {
         display: none;
     }
 
-    .box-servicos {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
     .sobre-container {
         flex-direction: row;
         align-items: flex-start;
+        gap: 50px;
     }
 
     .sobre-imagem {
@@ -433,5 +632,18 @@ header img {
     .sobre-texto {
         flex: 2;
         text-align: left;
+    }
+    
+    .sobre-texto h2,
+    .sobre-texto h3 {
+        text-align: left;
+    }
+    
+    #hero h1 {
+        font-size: 2.2em;
+    }
+    
+    #hero p {
+        font-size: 16px;
     }
 }
