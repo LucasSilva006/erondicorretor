@@ -53,7 +53,7 @@ p {
 /* ========== HEADER E NAVEGAÇÃO ========== */
 header {
     font-family: var(--fonte-subtitulo);
-    background-color: #000;
+    background: linear-gradient(90deg, rgb(0, 43, 99), rgb(0, 17, 43));
     color: #fff;
     padding: 15px 20px;
     display: flex;
@@ -86,7 +86,7 @@ header img {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: #000;
+    background: #001336;
     position: absolute;
     top: 60px;
     right: 1rem;
@@ -139,7 +139,7 @@ header img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 20, 76, 0.7), rgba(0, 9, 31, 0.5));
+    background: linear-gradient(90deg, rgba(0, 65, 150, 0.7), rgba(0, 35, 88, 0.5));
     z-index: 1;
 }
 
@@ -196,9 +196,11 @@ header img {
 /* ========== SEÇÕES PRINCIPAIS ========== */
 #imoveis-casas,
 #imoveis-caixa,
+#imoveis-terrenos,
 #provas-reais {
     text-align: center;
     margin: 25px auto;
+    scroll-margin: 12vh;
 }
 
 /* ========== CONTAINERS ========== */
@@ -229,6 +231,7 @@ header img {
 .provas-subtit {
     text-align: start;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 #box-terrenos-a-venda > .imoveis-subtit {
@@ -242,6 +245,7 @@ header img {
     text-align: start;
     font-size: 0.95em;
     color: #666;
+    margin-left: 10px;
 }
 
 .p-desc-item {
@@ -266,7 +270,7 @@ header img {
 }
 
 /* ========== CARROSSÉIS ========== */
-.carrossel-fotos-imoveis-a-venda,
+.carrossel-fotos-imoveis,
 .carrossel-fotos-provas-reais {
     display: flex;
     overflow-x: auto;
@@ -279,35 +283,35 @@ header img {
 }
 
 /* Webkit scrollbar styling */
-.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar,
+.carrossel-fotos-imoveis::-webkit-scrollbar,
 .carrossel-fotos-provas-reais::-webkit-scrollbar {
     height: 6px;
 }
 
-.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-track,
+.carrossel-fotos-imoveis::-webkit-scrollbar-track,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
 
-.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-thumb,
+.carrossel-fotos-imoveis::-webkit-scrollbar-thumb,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-thumb {
     background: var(--azul);
     border-radius: 10px;
 }
 
-.carrossel-fotos-imoveis-a-venda::-webkit-scrollbar-thumb:hover,
+.carrossel-fotos-imoveis::-webkit-scrollbar-thumb:hover,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-thumb:hover {
     background: var(--azul-escuro);
 }
 
 /* ========== CARDS DOS IMÓVEIS ========== */
-.fotos-imoveis-a-venda,
+.fotos-imoveis,
 .fotos-provas-reais {
     min-width: 300px;
     max-width: 320px;
     height: auto;
-    min-height: 400px;
+    min-height: auto;
     background: white;
     border-radius: 10px;
     flex-shrink: 0;
@@ -370,6 +374,7 @@ header img {
     padding: 50px 20px;
     background: linear-gradient(135deg, #00144c, #00091f);
     position: relative;
+    scroll-margin: 10vh;
 }
 
 #sobre::before {
@@ -537,7 +542,7 @@ header img {
         padding: 0 10px;
     }
     
-    .fotos-imoveis-a-venda,
+    .fotos-imoveis,
     .fotos-provas-reais {
         min-width: 280px;
         max-width: 300px;
@@ -569,13 +574,13 @@ header img {
 }
 
 @media (max-width: 480px) {
-    .carrossel-fotos-imoveis-a-venda,
+    .carrossel-fotos-imoveis,
     .carrossel-fotos-provas-reais {
         gap: 10px;
         padding: 8px;
     }
     
-    .fotos-imoveis-a-venda,
+    .fotos-imoveis,
     .fotos-provas-reais {
         min-width: 260px;
         max-width: 280px;
