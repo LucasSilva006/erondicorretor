@@ -1,197 +1,202 @@
 /* ========== IMPORTAÇÃO DE FONTES ========== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* ========== RESET E CONFIGURAÇÕES GLOBAIS ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --fonte-titulo: 'Montserrat', sans-serif;
-    --fonte-subtitulo: 'Poppins', sans-serif;
-    --fonte-texto: 'Open Sans', sans-serif;
-    --tamanho-texto: 1em;
-    --azul: #004893;
-    --azul-escuro: #001730;
-    --dourado: #ebca75;
-    --cinza-claro: #fdfdfd;
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-subtitulo: "Poppins", sans-serif;
+  --fonte-texto: "Open Sans", sans-serif;
+  --tamanho-texto: 1em;
+  --azul: #004893;
+  --azul-escuro: #001730;
+  --dourado: #ebca75;
+  --cinza-claro: #fdfdfd;
 }
 
 main {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 /* ========== TIPOGRAFIA GLOBAL ========== */
 h1 {
-    font-family: var(--fonte-titulo);
-    color: var(--azul-escuro);
-    font-size: 2.2em;
+  font-family: var(--fonte-titulo);
+  color: var(--azul-escuro);
+  font-size: 2.2em;
 }
 
 h2 {
-    font-family: var(--fonte-subtitulo);
-    color: var(--azul-escuro);
+  font-family: var(--fonte-subtitulo);
+  color: var(--azul-escuro);
 }
 
 h3 {
-    font-family: var(--fonte-texto);
-    font-weight: 700;
-    font-size: 1.3em;
-    color: var(--azul-escuro);
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--azul-escuro);
 }
 
 p {
-    font-family: var(--fonte-texto);
-    font-size: var(--tamanho-texto);
-    color: var(--azul-escuro);
-    line-height: 1.6;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--azul-escuro);
+  line-height: 1.6;
 }
 
 /* ========== HEADER E NAVEGAÇÃO ========== */
 header {
-    font-family: var(--fonte-subtitulo);
-    background: linear-gradient(90deg, rgb(0, 43, 99), rgb(0, 17, 43));
-    color: #fff;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: -1px;
-    z-index: 1000;
+  font-family: var(--fonte-subtitulo);
+  background: linear-gradient(90deg, rgb(0, 43, 99), rgb(0, 17, 43));
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: -1px;
+  z-index: 1000;
 }
 
 header img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 .menu-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .menu-toggle:hover {
-    color: var(--cinza-claro);
+  color: var(--cinza-claro);
 }
 
 .menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background: #001336;
-    position: absolute;
-    top: 60px;
-    right: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 1em;
-    text-align: start;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background: #001336;
+  position: absolute;
+  top: 60px;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .menu a:hover {
-    background-color: var(--azul);
-    color: var(--cinza-claro);
+  background-color: var(--azul);
+  color: var(--cinza-claro);
 }
 
 .menu.show {
-    display: flex;
+  display: flex;
 }
 
 /* ========== SEÇÃO HERO ========== */
 #hero {
-    background-color: #000;
-    text-align: start;
-    background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
-    background-position: center right;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    min-height: 15em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 24px 20px;
-    position: relative;
+  background-color: #000;
+  text-align: start;
+  background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
+  background-position: center right;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  min-height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 20px;
+  position: relative;
 }
 
 #hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, rgba(0, 65, 150, 0.7), rgba(0, 35, 88, 0.5));
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 65, 150, 0.7),
+    rgba(0, 35, 88, 0.5)
+  );
+  z-index: 1;
 }
 
 #hero > * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 #hero h1 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    font-family: var(--fonte-titulo);
-    font-weight: 600;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #hero p {
-    font-size: 15px;
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: start;
-    max-width: 400px;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: start;
+  max-width: 400px;
 }
 
 .botao-whatsapp-hero {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--cinza-claro);
-    color: #000;
-    text-decoration: none;
-    border-radius: 6px;
-    border: 2px solid var(--cinza-claro);
-    font-family: var(--fonte-texto);
-    font-size: 0.9em;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--cinza-claro);
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid var(--cinza-claro);
+  font-family: var(--fonte-texto);
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .botao-whatsapp-hero:hover {
-    background-color: var(--azul);
-    color: var(--cinza-claro);
-    border-color: var(--azul);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--azul);
+  color: var(--cinza-claro);
+  border-color: var(--azul);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .botao-whatsapp-hero span {
-    margin-left: 10px;
-    font-weight: bold;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 /* ========== SEÇÕES PRINCIPAIS ========== */
@@ -199,9 +204,9 @@ header img {
 #imoveis-caixa,
 #imoveis-terrenos,
 #provas-reais {
-    text-align: center;
-    margin: 25px auto;
-    scroll-margin: 12vh;
+  text-align: center;
+  margin: 25px auto;
+  scroll-margin: 12vh;
 }
 
 /* ========== CONTAINERS ========== */
@@ -209,442 +214,459 @@ header img {
 #box-terrenos-a-venda,
 #box-caixa,
 #box-provas-reais {
-    padding: 0 20px;
-    text-align: center;
+  padding: 0 20px;
+  text-align: center;
 }
 
 #box-terrenos-a-venda {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
 }
 
 /* ========== TÍTULOS ========== */
 .imoveis-tit,
 .provas-tit {
-    margin: 0 0 20px 0;
-    font-size: 1.8em;
-    font-weight: 700;
+  margin: 0 0 20px 0;
+  font-size: 1.8em;
+  font-weight: 700;
 }
 
 .imoveis-subtit,
 .provas-subtit {
-    text-align: start;
-    margin-bottom: 10px;
-    margin-left: 10px;
+  text-align: start;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 #box-terrenos-a-venda > .imoveis-subtit {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 /* ========== PARÁGRAFOS ========== */
 .imoveis-p,
 .provas-p {
-    margin: 0 0 15px 0;
-    text-align: start;
-    font-size: 0.95em;
-    color: #666;
-    margin-left: 10px;
+  margin: 0 0 15px 0;
+  text-align: start;
+  font-size: 0.95em;
+  color: #666;
+  margin-left: 10px;
 }
 
 .p-desc-item {
-    max-width: 300px;
-    text-align: justify;
-    padding: 10px 20px;
-    margin: 0 auto;
-    line-height: 1.5;
-    font-size: 0.9em;
+  max-width: 300px;
+  text-align: justify;
+  padding: 10px 20px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 0.9em;
 }
 
 /* ========== IMAGENS ========== */
 .img-casa {
-    width: 100%;
-    max-width: 320px;
-    min-width: 280px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ========== CARROSSÉIS ========== */
 .carrossel-fotos-imoveis,
 .carrossel-fotos-provas-reais {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 15px;
-    padding: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--azul) transparent;
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--azul) transparent;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Webkit scrollbar styling */
 .carrossel-fotos-imoveis::-webkit-scrollbar,
 .carrossel-fotos-provas-reais::-webkit-scrollbar {
-    height: 6px;
+  height: 6px;
 }
 
 .carrossel-fotos-imoveis::-webkit-scrollbar-track,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 .carrossel-fotos-imoveis::-webkit-scrollbar-thumb,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-thumb {
-    background: var(--azul);
-    border-radius: 10px;
+  background: var(--azul);
+  border-radius: 10px;
 }
 
 .carrossel-fotos-imoveis::-webkit-scrollbar-thumb:hover,
 .carrossel-fotos-provas-reais::-webkit-scrollbar-thumb:hover {
-    background: var(--azul-escuro);
+  background: var(--azul-escuro);
 }
 
 /* ========== CARDS DOS IMÓVEIS ========== */
 .fotos-imoveis,
 .fotos-provas-reais {
-    min-width: 300px;
-    max-width: 320px;
-    height: auto;
-    min-height: auto;
-    background: white;
-    border-radius: 10px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;
-    padding: 10px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  min-width: 300px;
+  max-width: 320px;
+  height: auto;
+  min-height: auto;
+  background: white;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  padding: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fotos-imoveis img,
+.fotos-provas-reais img {
+  height: 300px;
 }
 
 .desc-item {
-    padding-top: 10px;
-    flex: 1;
-    display: flex;
-    align-items: center;
+  padding-top: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* ========== BOTÕES WHATSAPP ========== */
 .botao-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: var(--azul);
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: var(--fonte-texto);
-    margin: 20px auto;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--azul);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: var(--fonte-texto);
+  margin: 20px auto;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .botao-whatsapp:hover {
-    background-color: var(--azul-escuro);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--azul-escuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .botao-whatsapp:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .icone-whatsapp {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* ========== SEÇÃO SOBRE ========== */
 #sobre {
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #00144c, #00091f);
-    position: relative;
-    scroll-margin: 10vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #00144c, #00091f);
+  position: relative;
+  scroll-margin: 10vh;
 }
 
 #sobre::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/pattern-overlay.png') repeat;
-    opacity: 0.05;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/pattern-overlay.png") repeat;
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .sobre-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 30px;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .sobre-imagem {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .sobre-imagem img {
-    width: 100%;
-    height: 100%;
-    max-width: 240px;
-    max-height: 320px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  max-width: 240px;
+  max-height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 #sobre a {
-    color: var(--dourado);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--dourado);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 #sobre a:hover {
-    color: var(--cinza-claro);
-    text-decoration: underline;
+  color: var(--cinza-claro);
+  text-decoration: underline;
 }
 
 .sobre-texto {
-    text-align: justify;
+  text-align: justify;
 }
 
 .sobre-texto h2 {
-    font-family: var(--fonte-subtitulo);
-    color: #ffffff;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
+  font-family: var(--fonte-subtitulo);
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .sobre-texto h3 {
-    font-family: var(--fonte-titulo);
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--dourado);
-    text-align: center;
-    font-size: 1.2em;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--dourado);
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .sobre-texto p {
-    font-family: var(--fonte-texto);
-    font-size: var(--tamanho-texto);
-    color: var(--cinza-claro);
-    line-height: 1.6;
-    margin: 25px 0;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cinza-claro);
+  line-height: 1.6;
+  margin: 25px 0;
 }
 
 /* ========== FOOTER ========== */
 .footer {
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-    color: #ffffff;
-    padding: 40px 20px;
-    font-family: var(--fonte-subtitulo);
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: var(--fonte-subtitulo);
 }
 
 .footer p {
-    color: white;
+  color: white;
 }
 
 .footer a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: var(--dourado);
-    text-decoration: underline;
+  color: var(--dourado);
+  text-decoration: underline;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .footer-links,
 .footer-social {
-    flex: 1;
-    min-width: 200px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-links h4,
 .footer-social h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: var(--dourado);
-    font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--dourado);
+  font-weight: 600;
 }
 
 .footer-links ul,
 .footer-social ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li,
 .footer-social li {
-    margin-bottom: 8px;
-    font-size: 14px;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
 .footer-copy {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 12px;
-    color: #bbbbbb;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 12px;
+  color: #bbbbbb;
 }
 
 #link-inove {
-    color: var(--dourado);
-    font-weight: 600;
+  color: var(--dourado);
+  font-weight: 600;
 }
 
 #link-inove:hover {
-    color: var(--cinza-claro);
+  color: var(--cinza-claro);
 }
 
 /* ========== WHATSAPP FLOAT ========== */
 .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .whatsapp-float img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 /* ========== RESPONSIVIDADE ========== */
 
-@media (max-width: 480px) {
-    .carrossel-fotos-imoveis,
-    .carrossel-fotos-provas-reais {
-        gap: 10px;
-        padding: 8px;
-    }
-    
-    .fotos-imoveis,
-    .fotos-provas-reais {
-        min-width: 260px;
-        max-width: 280px;
-        padding: 8px;
-    }
-    
-    .img-casa {
-        min-width: 240px;
-        max-width: 260px;
-        height: 180px;
-    }
-    
-    #hero h1 {
-        font-size: 2em;
-    }
-    
-    #hero p {
-        font-size: 14px;
-    }
-    
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
+@media (min-width: 480px) {
+  .carrossel-fotos-imoveis,
+  .carrossel-fotos-provas-reais {
+    gap: 10px;
+    padding: 8px;
+  }
 
-@media (max-width: 768px) {
-    
+  .fotos-imoveis,
+  .fotos-provas-reais {
+    min-width: 260px;
+    max-width: 280px;
+    padding: 8px;
+  }
+
+  .img-casa {
+    min-width: 240px;
+    max-width: 260px;
+    height: 180px;
+  }
+
+  #hero h1 {
+    font-size: 2em;
+  }
+
+  #hero p {
+    font-size: 14px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (min-width: 910px) {
-    .menu {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        background: none;
-        padding: 0;
-        box-shadow: none;
-    }
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
 
-    .menu-toggle {
-        display: none;
-    }
+  .menu-toggle {
+    display: none;
+  }
 
-    .sobre-container {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 50px;
-    }
+  .sobre-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+  }
 
-    .sobre-imagem {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
+  .sobre-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-    .sobre-texto {
-        flex: 2;
-        text-align: left;
-    }
-    
-    .sobre-texto h2,
-    .sobre-texto h3 {
-        text-align: left;
-    }
-    
-    #hero h1 {
-        font-size: 1.1em;
-    }
-    
-    #hero p {
-        font-size: 16px;
-    }
+  .sobre-texto {
+    flex: 2;
+    text-align: left;
+  }
+
+  .sobre-texto h2,
+  .sobre-texto h3 {
+    text-align: left;
+  }
+
+  #hero h1 {
+    font-size: 2.3em;
+  }
+
+  #hero p {
+    font-size: 1.5em;
+    max-width: 700px;
+  }
+
+  .carrossel-fotos-imoveis,
+  .carrossel-fotos-provas-reais {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 95%;
+    margin: 0 auto;
+    row-gap: 20px;
+  }
+
+  .fotos-imoveis {
+    width: 100px;
+    color: red;
+  }
 }
