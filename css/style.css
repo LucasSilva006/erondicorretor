@@ -45,6 +45,12 @@ h3 {
   color: var(--azul-escuro);
 }
 
+h4 {
+  font-family: var(--fonte-subtitulo);
+  font-weight: 500;
+  color: var(--azul-escuro);
+}
+
 p {
   font-family: var(--fonte-texto);
   font-size: var(--tamanho-texto);
@@ -123,7 +129,6 @@ header img {
   background-image: url("../images/imagens-principais/img-hero-erondi.jpg");
   background-position: center right;
   background-size: cover;
-  background-attachment: fixed;
   color: white;
   min-height: 15em;
   display: flex;
@@ -336,11 +341,34 @@ header img {
   height: 300px;
 }
 
+.box-do-tit-do-imovel {
+  margin: 20px 0 0 20px;
+  text-align: start;
+}
+
 .desc-item {
   padding-top: 10px;
   flex: 1;
   display: flex;
   align-items: center;
+}
+
+.caracteristicas-imoveis {
+  display: flex;
+  margin: 0 20px;
+}
+
+.info-m2, .info-vagas, .info-quartos {
+  margin: 10px 20px 0 0;
+}
+
+.caracteristicas-imoveis img {
+  width: 1em;
+  height: 1em;
+}
+
+.caracteristicas-imoveis p {
+  font-size: 0.8em;
 }
 
 /* ========== BOTÕES WHATSAPP ========== */
@@ -428,7 +456,6 @@ header img {
 
 #sobre a {
   color: var(--dourado);
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -469,7 +496,7 @@ header img {
 
 /* ========== FOOTER ========== */
 .footer {
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  background: linear-gradient(135deg, #000a25, #00040e);
   color: #ffffff;
   padding: 40px 20px;
   font-family: var(--fonte-subtitulo);
@@ -503,6 +530,13 @@ header img {
 .footer-social {
   flex: 1;
   min-width: 200px;
+}
+
+.footer-icons {
+  width: 35px;
+  display: inline;
+  margin: 10px 10px 10px 0;
+  text-decoration: none;
 }
 
 .footer-links h4,
