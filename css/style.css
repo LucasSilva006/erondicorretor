@@ -51,6 +51,12 @@ h4 {
   color: var(--azul-escuro);
 }
 
+h5 {
+  font-family: var(--fonte-subtitulo);
+  font-weight: 400;
+  color: #4d5b81;
+}
+
 p {
   font-family: var(--fonte-texto);
   font-size: var(--tamanho-texto);
@@ -344,6 +350,12 @@ header img {
 .box-do-tit-do-imovel {
   margin: 20px 0 0 20px;
   text-align: start;
+  height: 5em;
+}
+
+.valor-imovel {
+  margin: 10px 0 0 0;
+  font-size: 1.1em;
 }
 
 .desc-item {
@@ -355,13 +367,16 @@ header img {
 
 .caracteristicas-imoveis {
   display: flex;
-  margin: 0 20px;
+  justify-content: space-between; /* ocupa toda a largura */
+  align-items: center;
+  margin-top: 10px;
 }
 
 .info-m2,
-.info-vagas,
-.info-quartos {
-  margin: 10px 20px 0 0;
+.info-quartos,
+.info-banheiros {
+  flex: 1; /* cada um ocupa a mesma proporção */
+  text-align: center;
 }
 
 .caracteristicas-imoveis img {
@@ -370,7 +385,7 @@ header img {
 }
 
 .caracteristicas-imoveis p {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 /* ========== BOTÕES WHATSAPP ========== */
@@ -408,6 +423,39 @@ header img {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+}
+
+.espaco-do-botao {
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.espaco-do-botao img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.espaco-do-botao a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul);
+  width: 90%;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-family: var(--fonte-subtitulo);
+  font-size: 0.8em;
+  margin: 10px 5px;
+  transition: all 0.3s;
+  gap: 10px;
+}
+
+.espaco-do-botao a:hover {
+  background-color: var(--azul-escuro);
 }
 
 /* ========== SEÇÃO SOBRE ========== */
@@ -488,8 +536,6 @@ header img {
   font-size: 1.2em;
 }
 
-
-
 .sobre-texto p {
   font-family: var(--fonte-texto);
   font-size: var(--tamanho-texto);
@@ -550,7 +596,6 @@ header img {
   color: var(--dourado);
   font-weight: 600;
 }
-
 
 .footer-links ul,
 .footer-social ul {
@@ -649,7 +694,6 @@ header img {
 }
 
 @media (min-width: 910px) {
-
   header {
     padding: 15px 35px;
   }
@@ -722,7 +766,6 @@ header img {
 
   .fotos-imoveis {
     width: 100px;
-    color: red;
   }
 
   .footer-container {
