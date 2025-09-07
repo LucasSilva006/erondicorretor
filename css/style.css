@@ -281,6 +281,28 @@ header img {
   min-width: 280px;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-casa-pr {
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-casa-caixa {
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -335,7 +357,7 @@ header img {
   scroll-snap-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
-  padding: 10px;
+  padding: 3px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -348,7 +370,7 @@ header img {
 }
 
 .box-do-tit-do-imovel {
-  margin: 20px 0 0 20px;
+  margin: 20px;
   text-align: start;
   height: 5em;
 }
@@ -443,7 +465,7 @@ header img {
   justify-content: center;
   background-color: var(--azul);
   width: 90%;
-  border-radius: 12px;
+  border-radius: 7px;
   padding: 10px 20px;
   color: white;
   text-decoration: none;
@@ -675,7 +697,16 @@ header img {
 
   .img-casa {
     min-width: 240px;
-    max-width: 260px;
+    height: 180px;
+  }
+
+  .img-casa-pr {
+    min-width: 240px;
+    height: 180px;
+  }
+
+  .img-casa-caixa {
+    min-width: 240px;
     height: 180px;
   }
 
@@ -789,5 +820,12 @@ header img {
 
   .footer-social-links {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1500px) {
+  #imoveis-casas, #imoveis-terrenos, #imoveis-caixa, #provas-reais {
+    width: 80%;
+    margin: 0 auto;
   }
 }
