@@ -765,8 +765,9 @@ header img {
   }
 
   #hero {
-    height: 60vh;
-    gap: 5vh;
+    height: auto;
+    max-height: 60vh;
+    gap: 1vh;
   }
 
   #hero h1 {
