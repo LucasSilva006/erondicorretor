@@ -1429,7 +1429,7 @@
         <div class="sobre-container">
           <div class="sobre-imagem">
             <img
-              src="images/imagens-principais/img-erondi.jpg"
+              src="images/imagens-principais/img-erondi2.jpg"
               alt="Erondi Corretor"
             />
           </div>
@@ -1736,25 +1736,5 @@
     </main>
 
     <script src="javascript/main.js"></script>
-
-    <!-- Service Worker para Cache -->
-    <script>
-      // Registrar o Service Worker
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then(function (registration) {
-              console.log(
-                "Service Worker registrado com sucesso!",
-                registration.scope
-              );
-            })
-            .catch(function (error) {
-              console.log("Erro ao registrar Service Worker:", error);
-            });
-        });
-      }
-    </script>
   </body>
 </html>
