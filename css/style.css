@@ -637,12 +637,12 @@ header img {
   color: #bbbbbb;
 }
 
-#link-inove {
+#link-clarTI {
   color: var(--dourado);
   font-weight: 600;
 }
 
-#link-inove:hover {
+#link-clarTI:hover {
   color: var(--cinza-claro);
 }
 
